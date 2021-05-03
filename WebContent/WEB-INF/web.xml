@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ServletDemoOn</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Servlet Mapping for RequestDispatcher Start -->
+  <servlet>
+    <servlet-name>RequestDispatcher</servlet-name>
+    <servlet-class>RequestDispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestDispatcher</servlet-name>
+    <url-pattern>/demoRD</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for RequestDispatcher End -->
+
+  <!-- Servlet Mapping for Welcome Start -->
+  <servlet>
+    <servlet-name>Welcome</servlet-name>
+    <servlet-class>WelcomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Welcome</servlet-name>
+    <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for Welcome End -->
+  
+  <!-- Servlet Mapping for SendRedirect Start -->
+  <servlet>
+    <servlet-name>SendRedirect</servlet-name>
+    <servlet-class>SendRedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendRedirect</servlet-name>
+    <url-pattern>/demoSR</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for SendRedirect End -->
+
+  <!-- Servlet Mapping for ServletConfig Start -->
+  <servlet>
+    <servlet-name>ServletConfig</servlet-name>
+    <servlet-class>ServletConfigServlet</servlet-class>
+    <init-param>
+      <param-name>company</param-name>
+      <param-value>Rave</param-value>
+    </init-param>
+    <init-param>
+      <param-name>location</param-name>
+      <param-value>India</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletConfig</servlet-name>
+    <url-pattern>/demoConfig</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for ServletConfig End -->
+
+  <!-- Servlet Mapping for ServletContext Start -->
+  <servlet>
+    <servlet-name>ServletContext</servlet-name>
+    <servlet-class>ServletContextServlet</servlet-class>
+  </servlet>
+  <context-param>
+    <param-name>company</param-name>
+    <param-value>jlr</param-value>
+  </context-param>
+  <context-param>
+    <param-name>location</param-name>
+    <param-value>ireland</param-value>
+  </context-param>
+  <servlet-mapping>
+    <servlet-name>ServletContext</servlet-name>
+    <url-pattern>/demoContext</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for ServletConfig End -->
+    
+  <!-- Servlet Mapping for Cookie Start -->
+  <servlet>
+    <servlet-name>CreateCookie</servlet-name>
+    <servlet-class>CreateCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateCookie</servlet-name>
+    <url-pattern>/demoCreateCookie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ConsumeCookie</servlet-name>
+    <servlet-class>ConsumeCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConsumeCookie</servlet-name>
+    <url-pattern>/demoConsumeCookie</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for Cookie End -->
+
+  <!-- Servlet Mapping for Hidden Field Start -->
+  <servlet>
+    <servlet-name>CreateHiddenField</servlet-name>
+    <servlet-class>CreateHiddenFieldServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateHiddenField</servlet-name>
+    <url-pattern>/demoCreateHF</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ConsumeHiddenField</servlet-name>
+    <servlet-class>ConsumeHiddenFieldServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConsumeHiddenField</servlet-name>
+    <url-pattern>/demoConsumeHF</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for Hidden Field End -->
+
+  <!-- Servlet Mapping for Encoded URL start -->
+  <servlet>
+    <servlet-name>CreateURLRewriting</servlet-name>
+    <servlet-class>CreateURLRewritingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateURLRewriting</servlet-name>
+    <url-pattern>/demoCreateUR</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ConsumeURLRewriting</servlet-name>
+    <servlet-class>ConsumeURLRewritingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConsumeURLRewriting</servlet-name>
+    <url-pattern>/demoConsumeUR</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for Encode URI End -->
+
+  <!-- Servlet Mapping for Session start -->
+  <servlet>
+    <servlet-name>CreateSession</servlet-name>
+    <servlet-class>CreateSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateSession</servlet-name>
+    <url-pattern>/demoCreateSession</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ConsumeSession</servlet-name>
+    <servlet-class>ConsumeSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConsumeSession</servlet-name>
+    <url-pattern>/demoConsumeSession</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet Mapping for Session End -->
+  
+   <!-- Servlet Mapping for Filter Demo Start -->
+  <servlet>
+    <servlet-name>FilterDemo</servlet-name>
+    <servlet-class>FilterDemoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FilterDemo</servlet-name>
+    <url-pattern>/demoFilter</url-pattern>
+  </servlet-mapping>
+   <!-- Servlet Mapping for Filter Demo End -->
+
+  <!-- Servlet Mapping for Filter Start -->
+  <filter>
+    <filter-name>Filter</filter-name>
+    <filter-class>FilterServlet</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Filter</filter-name>
+    <url-pattern>/demoFilter</url-pattern>
+  </filter-mapping>
+  <!-- Servlet Mapping for Filter Start -->
+
+</web-app>
